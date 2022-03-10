@@ -1,0 +1,15 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+**/.terraform.lock.hcl
+
+# .tfvars files
+#*.tfvars
+
+/artifacts/sample/spark-sample-job/target/classes
+/artifacts/sample/spark-sample-job/target/maven-archiver
+/artifacts/sample/spark-sample-job/target/*.timestamp
