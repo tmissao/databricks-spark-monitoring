@@ -20,3 +20,8 @@ docker run -it --rm -v `pwd`/sample/spark-sample-job:/spark-sample-job -v "$HOME
 # notebook
 https://github.com/mspnp/spark-monitoring/issues/28
 https://www.youtube.com/watch?v=fktz63uDzM4&ab_channel=DustinVannoy
+
+## Result
+---
+
+![Results](./artifacts/results.gif)

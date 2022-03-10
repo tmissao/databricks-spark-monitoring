@@ -98,7 +98,11 @@ resource "databricks_cluster" "this" {
     }
   }
   spark_env_vars = local.databricks_spark_environment_vars
-  depends_on = [databricks_secret_scope.this]
+  depends_on = [
+    databricks_secret_scope.this,
+    azurerm_key_vault_secret.log_analytics_workspace_key,
+    azurerm_key_vault_secret.log_analytics_workspace_id
+  ]
 }
 
 resource "databricks_dbfs_file" "spark_sample_job_jar" {

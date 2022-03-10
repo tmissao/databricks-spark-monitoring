@@ -25,10 +25,12 @@ data "azurerm_client_config" "current" {}
 data "databricks_spark_version" "this" {
   spark_version = var.databrick.cluster.spark_version
   scala   = var.databrick.cluster.scala_version
+  depends_on = [azurerm_databricks_workspace.this]
 }
 
 data "databricks_node_type" "this" {
   local_disk = true
+  depends_on = [azurerm_databricks_workspace.this]
 }
 
 variable "resource_group" {
