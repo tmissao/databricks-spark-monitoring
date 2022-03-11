@@ -53,6 +53,7 @@ After the build process the `spark-sample-job-0.0.1.jar` will be under [target f
 
 ```bash
 cd src/terraform
+az login
 tfenv install
 tfenv use
 terraform init
