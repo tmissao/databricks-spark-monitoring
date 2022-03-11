@@ -9,7 +9,7 @@ Most of this work was inspired by the [mspnp spark-monitoring repository](https:
 ## Before Beginning
 ---
 
-The `Spark Libraries` used in this project was built through [mspnp spark-monitoring repository](https://databricks.com/), so if you want rebuild them there is no problem, just place the jars under the [libs folder](./artifacts//libs/) and if necessary correct their names in the terraform variable `spark_libs_names` locate at [variables.tf file](./src/variables.tf). This was the command used to build them:
+The `Spark Libraries` used in this project was built through [mspnp spark-monitoring repository](https://databricks.com/), so if you want rebuild them there is no problem, just place the jars under the [libs folder](./artifacts/libs/) and if necessary correct their names in the terraform variable `spark_libs_names` located at [variables.tf file](./src/variables.tf). This is the command used to build them:
 
 ```bash
 git clone https://github.com/mspnp/spark-monitoring
@@ -18,7 +18,7 @@ docker run -it --rm -v `pwd`:/spark-monitoring -v "$HOME/.m2":/root/.m2 mcr.micr
 
 ```
 
-After that, just move the generated jars under `spark-monitoring/src/target` to `artifacts/libs` folder of this project. 
+After that, just move the generated jars under `spark-monitoring/src/target` to [`artifacts/libs`](./artifacts/libs/) folder of this project. 
 
 > Do not forget to fix the jars names if necessary!
 
@@ -38,9 +38,9 @@ The following profiles could be used:
 - scala-2.12_spark-3.1.2
 - scala-2.12_spark-3.2.0
 
-However, if other profile was used, be sure to update the terraform variable `databrick` locate at [variables.tf file](./src/variables.tf) to match the scala and spark version used. Otherwise, the Databricks cluster will not be compatible and the job will fail.
+However, if other profile was used, be sure to update the terraform variable `databrick` located at [variables.tf file](./src/variables.tf) to match the scala and spark version used. Otherwise, the Databricks cluster will not be compatible and the job will fail.
 
-After the build process the `spark-sample-job-0.0.1.jar` will be under [target folder](./artifacts/sample/spark-sample-job/target/).
+Once the build process finish, a file named `spark-sample-job-0.0.1.jar` will be created under [target folder](./artifacts/sample/spark-sample-job/target/).
 ## Setup
 ---
 
