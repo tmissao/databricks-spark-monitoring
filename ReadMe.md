@@ -1,6 +1,8 @@
 # Databricks Sparking Monitoring
 
-The main purpose of this project is to enable monitoring on [Databricks](https://databricks.com/), in other words, is desired to retrieve its logs and metrics from databricks apps such as: workbooks, jobs and more.
+The main purpose of this project is to enable monitoring on [Databricks](https://databricks.com/), in other words, is desired to retrieve its logs and metrics from databricks apps (jobs and workbooks) and send them to [Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview).
+
+![Architecture](./artifacts/pictures/architecture.jpg)
 
 Most of this work was inspired by the [mspnp spark-monitoring repository](https://databricks.com/) and automatized using [Terraform](https://www.terraform.io/). So, all the heavy work is done!
 
