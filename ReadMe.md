@@ -52,7 +52,7 @@ Once the build process finish, a file named `spark-sample-job-0.0.1.jar` will be
 ---
 
 ```bash
-cd src/terraform
+cd src
 az login
 tfenv install
 tfenv use
